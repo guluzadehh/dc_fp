@@ -7,11 +7,11 @@ public class Main {
             return;
         }
 
-        NodeCombiner nc = new NodeCombiner();
+        NodeCombiner nc = new NodeCombiner(args[0]);
 
-        nc.run(args[0]);
+        nc.combine();
 
-        for (Node n : nc.getNodes().make()) {
+        for (Node n : nc.make()) {
             System.out.println("File: " + n.getPath());
             System.out.println("Content:\n" + n.getContent() + "\n");
         }
