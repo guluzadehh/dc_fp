@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Node {
-    private static Pattern _dirPattern = Pattern.compile("require '(.+)'");
+    private static Pattern _dirPattern = Pattern.compile("require [‘\'\"]{1}(.+)[‘\'\"]{1}");
 
     private String _path;
     private String _content;
